@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1> WELCOME TO COVID TRACKER </h1>
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
