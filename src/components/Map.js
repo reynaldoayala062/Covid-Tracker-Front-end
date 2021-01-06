@@ -1,7 +1,7 @@
 import React from 'react';
-import ListsContainer from '../containers/ListsContainer';
-import LocationsContainer from '../containers/LocationsContainer';
-import CommentsContainer from '../containers/CommentsContainer';
+import listsContainer from '../containers/listsContainer';
+import locationsContainer from '../containers/locationsContainer';
+import commentsContainer from '../containers/commentsContainer';
 
 const Map = () => {
     return (
