@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Login from '../auth/Login'
 import Signup from '../auth/Signup'
-import Map from  '../components/Map'
+import ContainerMap from  './ContainerMap'
 import UserProfile  from '../components/UserProfile'
 
 
@@ -18,6 +18,7 @@ const App = () => {
       <Header/>
       <h1> WELCOME TO COVID TRACKER </h1>
         <Switch>
+
           <Route path='/home'>
             <Home/>
           </Route>
@@ -31,7 +32,7 @@ const App = () => {
           </Route>
 
           <Route path='/map'>
-            <Map/>
+            <ContainerMap/>
           </Route>
 
           <Route path='/user-profile'>
@@ -39,7 +40,6 @@ const App = () => {
           </Route>
 
         </Switch>
-
       </BrowserRouter>
     </div>
   );
