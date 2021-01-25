@@ -6,6 +6,17 @@ import { withGoogleMap, withScriptjs } from 'react-google-maps'
 import Map from '../components/Map'
 
 const ContainerMap = () => {
+  const mapRef = React.useRef();
+  const onMapLoad = React.useCallback((map) => {
+    mapRef.current = map;
+  }, []);
+
+
+  const panTo = React.useCallback(({lat, lng}) =>{
+    mapRef.current.panTo({lat, lng});
+    mapRef.current.setZoom(14)
+  }, []);
+
     const WrappedMap = withScriptjs(withGoogleMap(Map));
 
     return (
